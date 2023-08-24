@@ -57,8 +57,8 @@ Implememtion: Project Reactor
   Reactor - Is fully  non-blocking and provides effcient demand management process a potentially unbounded number of elememts
   Reactor offers two reactive an composable APIs Flux[N] and Mono[01][01]
 
-  It is well suited
-
+  It is well suited for a microservice architeure,Reator offers backpressure-ready newtwork engines for http
+Reactor provices a wide range of perators. These operators allow us to select , filete ,transform and combine streams
 
                     
 
