@@ -1,0 +1,40 @@
+This four re the reactive streams in project reactor
+
+
+Publisher    - Represnts the data source e.g database or remote service
+Subsribe     - Has four methods
+Subsctiption - Has two methods - connects app and data strore
+Proceoor     - extends subsciber and publisher
+             - Procesoor can behave as a subsciber and publisher
+             - Not really used on a day to day basis
+
+
+
+Reactive Streams is a specification that defines a set of interfaces, rules, and patterns for asynchronous stream processing with non-blocking backpressure. It's a foundation of reactive programming, ensuring that data flows between different components (such as data producers and consumers) in a way that is efficient, responsive, and prevents resource exhaustion. In Project Reactor, Reactive Streams interfaces are used to handle asynchronous data streams and provide the building blocks for creating reactive applications.
+
+The Reactive Streams specification defines four key interfaces:
+
+1. **Publisher**:
+   The `Publisher` interface represents a source of data that emits items (events) asynchronously to its subscribers. It's responsible for pushing data to subscribers as the data becomes available. In real-world applications, a `Publisher` can represent various sources, such as sensor readings, messages from a message broker, or data from a database query.
+
+2. **Subscriber**:
+   The `Subscriber` interface represents the consumer of the data emitted by the `Publisher`. Subscribers subscribe to a `Publisher` to receive and process the emitted items. The `Subscriber` provides methods to handle the incoming data, errors, and completion signals. In a real-world scenario, a `Subscriber` could be processing incoming events, aggregating data, or performing computations.
+
+3. **Subscription**:
+   The `Subscription` interface represents the contract between a `Publisher` and a `Subscriber`. It allows the `Subscriber` to request a certain number of items from the `Publisher`, control the flow of data, and signal the `Publisher` to stop emitting items. This is where backpressure comes into play: the `Subscriber` can signal to the `Publisher` when it's ready to receive more data, preventing data overflow. In real-world applications, the `Subscription` mechanism ensures that data is delivered at a pace the consumer can handle.
+
+4. **Processor**:
+   The `Processor` interface represents a component that acts as both a `Publisher` and a `Subscriber`. It can transform or process the data between its upstream `Publisher` and downstream `Subscriber`. Processors are used for intermediate data processing, allowing you to create complex data flows by combining multiple processors and publishers. In real-world applications, a `Processor` might represent a data transformation step or a filtering mechanism.
+
+In real-world applications, Reactive Streams interfaces are used to build asynchronous and event-driven systems. For instance:
+
+- A weather monitoring system could use a `Publisher` to emit temperature readings, and multiple subscribers could receive and process these readings in real time.
+- An e-commerce application could use a `Publisher` to emit new order notifications, and subscribers could update inventory, send notifications, and process payments.
+- A financial trading platform could use a `Processor` to aggregate incoming market data before feeding it to a `Subscriber` that makes trading decisions.
+
+By adhering to the Reactive Streams specification, Project Reactor and other reactive programming libraries ensure that the interactions between producers and consumers are well-managed in terms of asynchronicity, backpressure, and non-blocking behavior. This enables you to build responsive and scalable applications capable of handling asynchronous data flows effectively.
+
+
+
+
+ 
