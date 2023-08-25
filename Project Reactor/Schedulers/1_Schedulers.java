@@ -1,4 +1,6 @@
-Schedulers in Project Reactor are a crucial part of the reactive programming paradigm. They provide a way to manage the execution context and threads that are used for executing tasks within reactive pipelines. Schedulers help control where and when tasks are executed, allowing developers to manage concurrency, parallelism, and responsiveness in reactive applications.
+Schedulers in Project Reactor are a crucial part of the reactive programming paradigm. 
+    They provide a way to manage the execution context and threads that are used for executing tasks within reactive pipelines. 
+    Schedulers help control where and when tasks are executed, allowing developers to manage concurrency, parallelism, and responsiveness in reactive applications.
 
 Project Reactor provides various built-in schedulers, and you can also create custom schedulers to fit your application's requirements.
 
