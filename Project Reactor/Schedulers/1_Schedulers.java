@@ -10,7 +10,8 @@ Here's an overview of some common built-in schedulers in Project Reactor:
 
 2. **Schedulers.single()**: Uses a single worker thread to execute tasks sequentially. Useful for scenarios where tasks must be executed in a specific order.
 
-3. **Schedulers.parallel()**: Provides a pool of worker threads, suitable for parallel execution of tasks. The number of threads is typically equal to the number of CPU cores.
+3. **Schedulers.parallel()**: Provides a pool of worker threads, suitable for parallel execution of tasks. 
+    The number of threads is typically equal to the number of CPU cores.
 
 4. **Schedulers.elastic()**: Uses an elastic pool of worker threads, which can expand or shrink based on the load. This is suitable for I/O-bound tasks.
 
